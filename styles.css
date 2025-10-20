@@ -1,0 +1,220 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    background: linear-gradient(15deg, #060833, #743476);
+}
+
+[data-testid="test-profile-card"] {
+  background-color: white;
+  width: 90%;               /* ✅ Take up 90% of the screen width */
+  max-width: 600px;         /* ✅ But never go beyond 600px */
+  margin: 20px auto;        /* ✅ Center horizontally */
+  border-radius: 20px;
+  overflow: hidden;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+}
+
+[data-testid="test-profile-card"] h2 {
+  margin-bottom: 10px;
+}   
+
+.top-part {
+  position: relative; /* So the image can be positioned inside */
+  background-color: #7d247486;
+  background-image:
+    radial-gradient(circle at 15% 25%, rgba(255,255,255,0.5) 1.2px, transparent 2px),
+    radial-gradient(circle at 70% 20%, rgba(255,255,255,0.4) 1px, transparent 3px),
+    radial-gradient(circle at 30% 75%, rgba(255,255,255,0.6) 1.5px, transparent 3px),
+    radial-gradient(circle at 85% 60%, rgba(255,255,255,0.3) 1.8px, transparent 3px),
+    radial-gradient(circle at 40% 45%, rgba(255,255,255,0.5) 1.3px, transparent 2px),
+    radial-gradient(circle at 90% 85%, rgba(255,255,255,0.4) 1px, transparent 2px),
+    radial-gradient(circle at 10% 90%, rgba(255,255,255,0.7) 1.8px, transparent 2px),
+    radial-gradient(circle at 50% 10%, rgba(255,255,255,0.5) 1px, transparent 2px);
+  background-repeat: no-repeat;
+  background-size: 120% 120%;
+  animation: moveDots 4s ease-in-out infinite alternate;
+  box-shadow: 0 4px 8px rgba(41, 38, 38, 0.2);
+  padding: 20px;
+  color: white;
+  height: 200px;
+  border-radius: 20px 20px 0 0;
+}
+
+@keyframes moveDots {
+  0% {
+    background-position: 0% 0%;
+  }
+  50% {
+    background-position: 50% 50%;
+  }
+  100% {
+    background-position: 100% 100%;
+  }
+}
+
+
+/* ✅ Image centered at bottom edge */
+.profile-picture {
+  position: absolute;
+  bottom: 0; /* touches the bottom edge */
+  left: 50%; /* horizontally centered */
+  transform: translate(-50%, 50%); /* moves center of image to bottom edge */
+  width: 200px;
+  height: 200px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 3px solid white;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+  transition: width 0.3s ease, height 0.3s ease;
+}
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+  [data-testid="test-profile-card"] {
+    width: 95%;              /* slightly narrower screens */
+  }
+
+  .profile-picture {
+    width: 150px;            /* reduce picture size */
+    height: 150px;
+  }
+
+  .bottom-part {
+    padding-top: 100px;      /* adjust space for smaller picture */
+  }
+}
+
+@media (max-width: 480px) {
+  .profile-picture {
+    width: 140px;            /* small phones */
+    height: 140px;
+  }
+
+  .bottom-part {
+    padding-top: 80px;
+  }
+}
+
+/* user's Name*/
+[data-testid="test-user-name"]{
+  margin: auto;
+  color:#6b2e6d;
+}
+
+/* user's Bio & Description*/
+.user-bio{
+  font-size: 18px;
+  color: #555;
+  margin-top: 10px;
+}
+
+.description{
+  font-size: 24px;
+}
+
+.bottom-part {
+  text-align: center;
+  padding: 120px 20px 30px; /* Top padding to accommodate the overlapping image */
+}
+[data-testid="test-user-name"] {
+  font-size: 24px;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+.social-links{
+  list-style: none;
+  display: flex;
+  justify-content: center;
+  gap: 40px;
+}
+
+.social-links li a{
+  font-size: 32px;
+  color:#889fde;
+  text-decoration: none;
+  transition: color 0.6s ease-in-out transform 0.7s ease-in-out;
+}
+
+.fa-brands.fa-instagram:hover{
+  color: #962fbf;
+  transform: scale(1.5);
+}
+
+.fa-brands.fa-linkedin:hover{
+  color: #0a66c2;
+  transform: scale(1.5);
+}
+
+.fa-brands.fa-github:hover{
+  color: #5FED83;
+  transform: scale(1.5);
+}
+
+/* Hobies and Dislike Section */
+.hobbies-dislikes {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 40px;
+  padding: 20px;
+  margin-top: 20px;
+  flex-wrap: wrap; /* ✅ makes it responsive */
+}
+
+.hobbies-section,
+.dislikes-section {
+  flex: 1;
+  min-width: 220px; /* ensures good stacking on mobile */
+}
+
+.hobbies-dislikes h3 {
+  font-size: 20px;
+  color: #6b2e6d;;
+  margin-bottom: 10px;
+  text-align: center;
+  position: relative;
+}
+
+.hobbies-dislikes h3::after {
+  content: "";
+  display: block;
+  width: 40px;
+  height: 3px;
+  background-color: rgb(136, 159, 222);
+  margin: 6px auto 0;
+  border-radius: 2px;
+}
+
+.hobbies-dislikes ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  text-align: center;
+}
+
+.hobbies-dislikes li {
+  background: #f5f8ff;
+  padding: 10px;
+  margin-bottom: 8px;
+  border-radius: 10px;
+  font-size: 15px;
+  color: #333;
+  transition: transform 0.2s ease, background-color 0.3s ease;
+}
+
+.hobbies-dislikes li:hover {
+  background-color: #e6ecff;
+  transform: translateY(-2px);
+}
+
+/* Time in Milliseconds */
+#load-time{
+  text-align: right;
+  color: #ccd0e6;
+  margin-top: 20px;
+}

@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://kit.fontawesome.com/a7a188b016.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <article data-testid="test-profile-card">
+        <!-- Avatar Image -->
+        <figure class="top-part">
+            <img src="./images/,m.jpg" alt="profile-picture" class="profile-picture" data-testid="test-user-avatar">
+        </figure>
+
+        <figure class="bottom-part">
+            <h2 data-testid="test-user-name">MFONOBONG EMMANUEL</h2>
+            <p class="description">Frontend Developer</p>
+            <p data-testid="test-user-bio" class="user-bio">Driven by curiosity, I love bringing ideas to life through code.</p>
+
+            <!-- Hobbies and Dislikes -->
+            <section class="hobbies-dislikes">
+                <div class="hobbies-section">
+                    <h3>Hobbies</h3>
+                    <ul class="hobbies" data-testid="test-user-hobbies">
+                        <li>Exploring new web technologies</li>
+                        <li>Designing simple user interfaces</li>
+                        <li>Listening to music while coding</li>
+                    </ul>
+                </div>
+
+                <div class="dislikes-section">
+                    <h3>Dislikes</h3>
+                    <ul class="dislikes" data-testid="test-user-dislikes">
+                        <li>Slow internet connection</li>
+                        <li>Messy or unorganized code</li>
+                        <li>Poor communication in teamwork</li>
+                    </ul>
+                </div>
+            </section>
+
+
+            <!-- Social links -->
+            <ul data-testid="test-user-social-links" class="social-links">
+                <li>
+                    <a href="https://www.instagram.com/angel_james15/?hl=en" data-testid="test-user-social-instagram" target="_blank" rel="noopener noreferrer"><i class="fa-brands fa-instagram"></i></a>
+                </li>
+                <li>
+                    <a href="https://www.linkedin.com/in/mfonobong-sunday-2415mf?lipi=urn%3Ali%3Apage%3Ad_flagship3_profile_view_base_contact_details%3Bt87tB0APRCqVyPhpC4z1%2Bw%3D%3D" data-testid="test-user-social-linkedln" target="_blank" rel="noopener noreferrer"><i class="fa-brands fa-linkedin"></i></a>
+                </li>
+                <li>
+                    <a href="https://github.com/Mfonjames15" data-testid="test-user-social-github" target="_blank" rel="noopener noreferrer"><i class="fa-brands fa-github"></i></a>
+                </li>
+            </ul>
+
+            <p id="load-time" data-testid="test-user-time"></p>
+        </figure>
+    </article>
+
+    <script src="script.js"></script>
+</body>
+</html>
