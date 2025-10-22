@@ -4,14 +4,14 @@ This project builds on the Stage 0 profile card, expanding it into a multi-page 
 
 ---
 
-## 🔗 Live Links
+## Live Links
 
 - **Live Site:** [https://mfonjames15.github.io/Profile-Card](https://mfonjames15.github.io/Profile-Card)  
 - **Repository:** [https://github.com/Mfonjames15/Profile-Card](https://github.com/Mfonjames15/Profile-Card)
 
 ---
 
-## 📂 Pages Overview
+## Pages Overview
 
 ### 1. Contact Us Page
 - Form fields (all required):
